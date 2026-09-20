@@ -1,0 +1,25 @@
+<circuit version="2.0.0-" rev="260501" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" anicurr="0" ansi="0" width="3200" height="2400" >
+
+<item itemtype="MCU" CircId="mega32-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-88,-120" rotation="0" hflip="1" vflip="1" label="mega32-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Package="1- mega32_DIP" Frequency="16 MHz" ForceFreq="true" savePGM="false" Program="D:/here/PlatformIO/Projects/task3_int0/.pio/build/ATmega32/firmware.hex" Auto_Load="false" saveEepr="false" Wdt_enabled="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Led" CircId="Led-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-132,-112" rotation="-180" hflip="1" vflip="1" label="Led-2" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Ground" CircId="Ground-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-192,-92" rotation="0" hflip="1" vflip="1" label="Ground-3" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-4" mainComp="false" Show_id="false" Show_Val="false" Pos="-128,-48" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-4" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Small="false" Out="true" />
+
+<item itemtype="Push" CircId="Push-5" mainComp="false" Show_id="false" Show_Val="false" Pos="-124,8" rotation="0" hflip="1" vflip="1" label="Push-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" DT="false" Poles="1" />
+
+<item itemtype="Ground" CircId="Ground-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-168,28" rotation="0" hflip="1" vflip="1" label="Ground-6" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="mega32-1-PORTB0" endpinid="Led-2-lPin" pointList="-96,-112,-116,-112" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Led-2-rPin" endpinid="Ground-3-Gnd" pointList="-148,-112,-192,-112,-192,-108" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="mega32-1-RST" endpinid="Fixed Voltage-4-outnod" pointList="-96,-48,-112,-48" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="mega32-1-PORTD2" endpinid="Push-5-switch0pinN" pointList="-96,8,-108,8" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Push-5-pinP0" endpinid="Ground-6-Gnd" pointList="-140,8,-168,8,-168,12" />
+
+</circuit>
