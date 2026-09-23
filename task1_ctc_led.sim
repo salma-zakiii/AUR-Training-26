@@ -1,0 +1,17 @@
+<circuit version="2.0.0-" rev="260501" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" anicurr="0" ansi="0" width="3200" height="2400" >
+
+<item itemtype="MCU" CircId="mega32-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-64,-160" rotation="0" hflip="1" vflip="1" label="mega32-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Package="1- mega32_DIP" Frequency="16 MHz" ForceFreq="true" savePGM="false" Program="D:/here/PlatformIO/Projects/task1_ctc_led/.pio/build/ATmega32/firmware.hex" Auto_Load="false" saveEepr="false" Wdt_enabled="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-104,-88" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-2" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Small="false" Out="true" />
+
+<item itemtype="Ground" CircId="Ground-4" mainComp="false" Show_id="false" Show_Val="false" Pos="-144,-120" rotation="0" hflip="1" vflip="1" label="Ground-4" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Led" CircId="Led-5" mainComp="false" Show_id="false" Show_Val="false" Pos="-104,-152" rotation="180" hflip="1" vflip="1" label="Led-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Fixed Voltage-2-outnod" endpinid="mega32-1-RST" pointList="-88,-88,-72,-88" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="mega32-1-PORTB0" endpinid="Led-5-lPin" pointList="-72,-152,-88,-152" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Led-5-rPin" endpinid="Ground-4-Gnd" pointList="-120,-152,-144,-152,-144,-136" />
+
+</circuit>
