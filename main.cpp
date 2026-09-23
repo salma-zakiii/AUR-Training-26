@@ -1,21 +1,32 @@
-#define F_CPU 8000000UL
-#include <avr/io.h>
-#include <avr/interrupt.h>
+#include <Arduino.h>
+#include "DS1621.h"
 
-ISR(INT0_vect) {
-    PORTB ^= (1 << PB0);   
-}
-
-int main(void) {
-    DDRB |= (1 << PB0);    
-    PORTB &= ~(1 << PB0);  
-    DDRD &= ~(1 << PD2);   
-    PORTD |= (1 << PD2);   
-    MCUCR |= (1 << ISC01);
-    MCUCR &= ~(1 << ISC00);
-    GICR |= (1 << INT0);   
-    sei();                 
-    while (1) {
-        
+void setup() {
+    Serial.begin(9600);
+    uint8_t err = ds1621_begin();
+    if (err) {
+        Serial.print(F("Config error: "));
+        Serial.println(err);
     }
+}
+void loop() {
+    uint8_t err = ds1621_startConvert();
+    if (err) {
+        Serial.print(F("Start error: "));
+        Serial.println(err);
+        delay(1000);
+        return;
+    }
+    delay(800);  
+    float t;
+    err = ds1621_readTemp(t);
+    if (err) {
+        Serial.print(F("Read error: "));
+        Serial.println(err);
+    } else {
+        Serial.print(F("Temperature: "));
+        Serial.print(t, 1);
+        Serial.println(F(" C"));
+    }
+    delay(1000);
 }
